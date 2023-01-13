@@ -11,11 +11,11 @@ const Modals = () => {
         <p>Hola este es el contenido de mi modal 1</p>
         <img src="https://placeimg.com/400/400/animals" alt="Animals" />
       </Modal>
-      <Modal>
+      {/* <Modal>
       <h3>Modal 2</h3>
         <p>Hola este es el contenido de mi modal 2</p>
         <img src="https://placeimg.com/400/400/nature" alt="Nature" />
-      </Modal>
+      </Modal> */}
     </div>
   );
 };
