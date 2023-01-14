@@ -1,11 +1,13 @@
 import React from "react";
 import { useModal } from "./hooks/useModal";
 import Modal from "./Modal";
+import ModalPortal from "./ModalPortal";
 
 const Modals = () => {
     const [isOpenModal1, openModal, closeModal1 ] = useModal(true)
     const [isOpenModal2, openModal2, closeModal2 ] = useModal(false)
     const [isOpenModal3, openModal3, closeModal3 ] = useModal(false)
+    const [isOpenModal, openModalPortal, closeModalPortal ] = useModal(false)
   return (
     
     <div>
@@ -13,6 +15,7 @@ const Modals = () => {
       <button onClick={openModal}>Modal 1</button>
       <button onClick={openModal2}>Modal 2</button>
       <button onClick={openModal3}>Modal Contacto</button>
+      <button onClick={openModalPortal}>Modal Portal</button>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo id aperiam sapiente laudantium repudiandae ducimus quos voluptates eaque placeat, dicta est dignissimos. Odio, harum cupiditate. Nisi sapiente a velit laborum?
       Quis id unde repellendus. Numquam aliquid vel facere debitis quia sint accusantium, ut neque esse iste dicta veritatis libero, harum minima? Ab, corporis cumque soluta magnam dignissimos corrupti sequi molestiae.
       Facilis dolorem totam neque modi enim perferendis libero porro, quo nisi repellendus voluptate omnis quia aut, vitae quae blanditiis ullam eaque nostrum! Facere nisi labore saepe sint porro qui placeat.
@@ -80,6 +83,12 @@ const Modals = () => {
         <p>Hola este es el contenido de mi modal 3</p>
         <img src="https://placeimg.com/400/400/people" alt="Nature" />
       </Modal>
+
+      <ModalPortal isOpen={isOpenModal} closeModal={closeModalPortal}>
+      <h3>Modal Portal</h3>
+        <p>Hola este es el contenido de mi modal Portal</p>
+        <img src="https://placeimg.com/400/400/tech" alt="Nature" />
+      </ModalPortal>
     </div>
   );
 };
